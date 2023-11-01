@@ -3,7 +3,32 @@
     --padding: 140px;
     --color_main_black: #110A1D;
     --color_main_white: #FFF;
+    --color_transp_white60: rgba(255, 255, 255, 0.60);
+    --color_transp_white12: rgba(255, 255, 255, 0.12);
     --color_main_blue: #478BF9;
+    --color_additional_purple: #9DADF2;
+}
+
+html,
+body {
+    /* Firefox */
+    scrollbar-color: var(--color_main_blue) var(--color_transp_white12);
+    scrollbar-width: thin;    
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 299px;
+    background-color: var(--color_transp_white12);
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color_main_blue);
+    border-radius: 10px;
+    width: 8px;
+    height: 104px;
 }
 
 
@@ -39,6 +64,29 @@ p {
     margin: 0;
 }
 
+p {
+    font-size: 24px;
+    line-height: 1.167;
+}
+
+h1 {
+    font-size: 96px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: inherit;
+}
+
+h4 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: inherit;
+}
+
 .container {
     max-width: calc(var(--width) + (var(--padding)*2));
     padding: 0 var(--padding);
@@ -62,4 +110,264 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 24px auto;
 }
+
+.header__btns {
+    display: flex;
+    gap: 14px;
+}
+
+
+.header__btn-nav {
+    border-radius: 24px;
+    border: 2px solid var(--color_additional_purple);
+    background-color: inherit;
+    padding: 14px;
+    color: inherit;
+}
+
+
+.header__btn-nav img {
+    margin-right: 8px;
+}
+
+
+
+/*main hero section*/
+
+
+
+.main__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__hero {
+    position: relative;
+}
+
+
+.main__container_hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 669px;
+    gap: 48px;
+}
+
+.main__blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+
+.main__blog_cards-container {
+    display: flex;
+    max-height: 595px;
+    max-width: 531px;
+    border-radius: 100px;
+    border: 3px solid var(--color_main_blue);
+    background-color: var(--color_transp_white12);
+    backdrop-filter: blur(10px);
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.main__blog_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 40px 24px 24px;
+}
+
+
+.blog__card {
+    padding: 16px 64px;
+    border-radius: 196px;
+    background-color: var(--color_main_blue);
+}
+
+
+.blog__card_item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+.main__hero_title,
+.main__blog_title {
+    text-transform: uppercase;
+}
+
+.main__hero_slogan {
+    color: var(--color_transp_white60);
+}
+
+
+.main__btn_partner {
+    height: 72px;
+    width: 393px;
+    border-radius: 48px;
+    background-color: var(--color_main_blue);
+    text-transform: uppercase;
+    color: inherit;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.33;
+}
+
+
+
+
+/*banner area background*/
+
+.decor {
+    position: absolute;
+    pointer-events: none;
+}
+
+.decor__img {
+    position: absolute;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.decor__img_01 {
+    top: -400px;
+    left: 100px;
+    width: 226px;
+    height: 1302px;
+    background-image: url("../img/Dot_light.svg");
+}
+
+
+
+/*main banner section*/
+
+
+.main__container_background {
+    display: flex;
+    position: relative;
+}
+
+
+.line_first,
+.line_second,
+.line_third {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.first__img_shield {
+    width: 99.106px;
+    height: 99.121px;
+    background-image: url("../img/Shield.svg");
+}
+
+.first__img_m {
+    width: 99.09px;
+    height: 99.09px;
+    background-image: url("../img/M.svg")
+}
+
+.first__img_soccer {
+    width: 99.103px;
+    height: 99.09px;
+    background-image: url("../img/Soccer.svg")
+}
+
+.first__img_dollar {
+    width: 99.173px;
+    height: 220.247px;
+    background-image: url("../img/Dollar.svg");
+}
+
+
+.first__img_world {
+    width: 99.173px;
+    height: 220.257px;
+    background-image: url("../img/World.svg");
+}
+
+.first__img_timer {
+    width: 99.106px;
+    height: 99.121px;
+    background-image: url("../img/Timer.svg");
+}
+
+
+.first__img_crown {
+    width: 99.923px;
+    height: 99.923px;
+    background-image: url("../img/Crown.svg");
+}
+
+
+.line_first {
+    animation: line_first_translate 10s infinite ease-in-out;
+}
+
+
+.line_second {
+    animation: line_second_translate 10s infinite ease-in-out;
+}
+
+.line_third {
+    animation: line_third_translate 10s infinite ease-in-out;
+}
+
+
+@keyframes line_first_translate {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -100px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+
+@keyframes line_second_translate {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 100px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes line_third_translate {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -100px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+
+/*footer*/
